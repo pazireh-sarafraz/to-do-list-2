@@ -2,19 +2,17 @@ $(function () {
     
     // show modal by click on Hello btn
     $("header .logo-btn button").click(function () {
-        $(this).children(".modal-container").removeClass("show");
-        $(this).children(".modal-container").removeClass("hide");
-        $(this).children(".modal-container").addClass("show");
+        $("#modal-container").removeClass("show");
+        $("#modal-container").removeClass("hide");
+        $("#modal-container").addClass("show");
     });
 
     
     // hide modal by click on icon-close btn
-    $("header .logo-btn button .modal-container .modal i.icon-close").click(function () {
-
-        console.log($(this).parent().parent());
-        $(this).parent().parent().removeClass("show");
-        $(this).parent().parent().removeClass("hide");
-        $(this).parent().parent().addClass("hide");
+    $("#modal-container i.icon-close").click(function () {
+        $("#modal-container").removeClass("show");
+        $("#modal-container").removeClass("hide");
+        $("#modal-container").addClass("hide");
     });
 
 
